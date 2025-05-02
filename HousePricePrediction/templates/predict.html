@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 3.4.1 CSS and JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    {% load static %}
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f1115, #1c1f2b);
+            animation: gradient 15s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 50px;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid #00ffe1;
+            padding: 30px;
+        }
+
+        h1, h2 {
+            color: #e0e0e0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #1f1f2f;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            color: #e0e0e0;
+        }
+
+        input[type="text"]:focus {
+            border: 1px solid #00ffe1;
+            box-shadow: 0 0 5px rgba(0, 255, 225, 0.5);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            display: block;
+            margin: 30px auto 0;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 225, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .result-panel {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #00ffe1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #00ffe1;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        p{
+        color:#fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main container">
+    <h1>Please Enter the Following Values</h1>
+    <form action="/predict/result/">
+        <div class="row">
+            <div class="col-sm-4 form-section">
+                <p>Avg. Area Income</p>
+                <input type="text" name="n1" placeholder="Enter income">
+            </div>
+            <div class="col-sm-4 form-section">
+                <p>Avg. Area House Age</p>
+                <input type="text" name="n2" placeholder="Enter house age">
+            </div>
+            <div class="col-sm-4 form-section">
+                <p>Avg. Area Number of Rooms</p>
+                <input type="text" name="n3" placeholder="Enter number of rooms">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 form-section">
+                <p>Avg. Area Number of Bedrooms</p>
+                <input type="text" name="n4" placeholder="Enter number of bedrooms">
+            </div>
+            <div class="col-sm-4 form-section">
+                <p>Avg. Area Population</p>
+                <input type="text" name="n5" placeholder="Enter population">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="PREDICT">
+        </div>
+    </form>
+    <div class="row result-panel">
+        <h2>{{result2}}</h2>
+    </div>
+</div>
+
+</body>
+</html>
