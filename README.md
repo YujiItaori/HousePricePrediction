@@ -23,7 +23,7 @@ Clean Output Section: Displays the predicted price in an easy-to-read format.
 🧠 Tech Stack:
 Frontend: HTML, CSS (modern UI styling), JavaScript (for dynamic input/output)
 
-Backend: Python with Flask
+Backend: Python with Django
 
 ML Model: Linear Regression trained on housing dataset
 
