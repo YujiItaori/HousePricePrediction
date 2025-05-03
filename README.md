@@ -1,3 +1,5 @@
+![Screenshot 2025-05-02 115255](https://github.com/user-attachments/assets/a24e03f7-3901-4cae-9b2c-ceb46b4225b5)
+![Screenshot 2025-05-02 115308](https://github.com/user-attachments/assets/5b8ce574-5d78-41f9-8e02-9a1bce2ac9c6)
 🏠 House Price Prediction – AI/ML Web Application
 The House Price Prediction System is a web-based machine learning project that predicts the selling price of a house based on multiple real-time input parameters. Designed with an intuitive and modern interface, this application leverages AI to provide accurate price estimations, helping users make informed decisions in the real estate market.
 
