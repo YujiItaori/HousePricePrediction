@@ -228,7 +228,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 *Ready to predict house prices with AI? Clone, setup, and start estimating property values!*
-
-
-![Screenshot 2025-05-02 115255](https://github.com/user-attachments/assets/a24e03f7-3901-4cae-9b2c-ceb46b4225b5)
-![Screenshot 2025-05-02 115308](https://github.com/user-attachments/assets/5b8ce574-5d78-41f9-8e02-9a1bce2ac9c6)
